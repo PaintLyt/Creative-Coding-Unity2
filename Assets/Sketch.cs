@@ -1,51 +1,57 @@
-﻿using UnityEngine;
-using System.Collections;
+using UnityEngine;
+using Pathfinding.Serialization.JsonFx; //make sure you include this using
 
 public class Sketch : MonoBehaviour {
+    public GameObject myPrefab;
+	public string _WebsiteURL = "http://yli632apptest1.azurewebsites.net/tables/ProductUnity?zumo-api-version=2.0.0";
 
-	public GameObject myPrefab;
+    void Start () {
+        //Reguest.GET can be called passing in your ODATA url as a string in the form:
+        //http://{Your Site Name}.azurewebsites.net/tables/{Your Table Name}?zumo-api-version=2.0.0
+        //The response produce is a JSON string
+        string jsonResponse = Request.GET(_WebsiteURL);
 
-	// Use this for initialization
-	void Start () {
+        //Just in case something went wrong with the request we check the reponse and exit if there is no response.
+        if (string.IsNullOrEmpty(jsonResponse))
+        {
+            return;
+        }
 
-		int totalCubes = 8;
+        //We can now deserialize into an array of objects - in this case the class we created. The deserializer is smart enough to instantiate all the classes and populate the variables based on column name.
+        Product[] products = JsonReader.Deserialize<Product[]>(jsonResponse);
 
-		float totalDistance = 2.5f;
-
+        //----------------------
+        //YOU WILL NEED TO DECLARE SOME VARIABLES HERE SIMILAR TO THE CREATIVE CODING TUTORIAL
+		int totalCubes = products.Length;
+		int totalDistance = 10;
+		int i = 0;
+		foreach (Product product in products)
 		//SIN() DISTRO
-		for (int i = 0; i < totalCubes; i++)
+		//for (int i = 0; i < totalCubes; i++)
 		{
 			float perc = i / (float)totalCubes;
-
-			float sin = Mathf.Sin (perc * Mathf.PI/2);
-
-			float x = 2.0f + sin * totalDistance;
+			i++;
+			//float sin = Mathf.Sin (perc * Mathf.PI/2);
+			float x = perc * totalDistance;
 			float y = 5.0f;
 			float z = 0.0f;
 
-			var newCube = (GameObject)Instantiate (myPrefab, new Vector3 (x, y, z), Quaternion.identity);
+			GameObject newCube = (GameObject)Instantiate (myPrefab, new Vector3 (x, y, z), Quaternion.identity);
 
-			newCube.GetComponent<CubeScript>().SetSize (.5f * (1.0f - perc)); //.5f is the maximum value
-			newCube.GetComponent<CubeScript> ().rotateSpeed = .2f + perc*4.0f; // perc; // Random.value;
+			newCube.GetComponent<CubeScript>().SetSize (2 * (1.0f - perc)); //.5f is the maximum value
+			newCube.GetComponent<CubeScript> ().rotateSpeed = perc; // perc; // Random.value;
+			newCube.GetComponent<TextMesh>().text = product.ProductName;
 		}
 
-		//LINEAR DISTRO
-		//for (int i = 0; i < totalCubes; i++)
-		//{
-		//float perc = i / (float)totalCubes;
 
-		//float x = perc * totalDistance;
-		//float y = 3.0f;
-		//float z = 0.0f;
+        //----------------------
 
-		//var newCube = (GameObject)Instantiate (myPrefab, new Vector3 (x, y, z), Quaternion.identity);
-		//newCube.GetComponent<CubeScript>().SetSize (1.0f - perc);
-		//newCube.GetComponent<CubeScript> ().rotateSpeed = 0; // perc; // Random.value;
-		//}
+        //We can now loop through the array of objects and access each object individually
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+	
 	}
 }
