@@ -1,1 +1,25 @@
 C:\Users\Ninal\Documents\Uni\INFOMGMT 192\Unity\New Unity Project 1\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\Pathfinding.JsonFx.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\UnityEngine.Analytics.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\UnityEngine.Networking.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\Unity.SerializationLogic.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\Unity.UNetWeaver.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\Unity.CecilTools.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\UnityEngine.xml
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\UnityEditor.xml
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\UnityEngine.UI.xml
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\UnityEngine.Networking.xml
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\Temp\bin\Debug\UnityEngine.Analytics.xml
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\obj\Debug\Assembly-CSharp.dll
+C:\Users\Ninal\Documents\GitHub\Creative-Coding-Unity2\obj\Debug\Assembly-CSharp.pdb
