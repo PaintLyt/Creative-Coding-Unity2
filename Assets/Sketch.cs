@@ -31,7 +31,8 @@ public class Sketch : MonoBehaviour {
 		{
 			float perc = i / (float)totalCubes;
 			i++;
-			//float sin = Mathf.Sin (perc * Mathf.PI/2);
+			float sin = Mathf.Sin (perc * Mathf.PI/2);
+//			float x = 2.0f + sin * totalDistance;
 			float x = perc * totalDistance;
 			float y = 5.0f;
 			float z = 0.0f;
@@ -39,7 +40,7 @@ public class Sketch : MonoBehaviour {
 			GameObject newCube = (GameObject)Instantiate (myPrefab, new Vector3 (x, y, z), Quaternion.identity);
 
 			newCube.GetComponent<CubeScript>().SetSize ((1.0f - perc)*2); //.5f is the maximum value
-			newCube.GetComponent<CubeScript> ().rotateSpeed = perc; // perc; // Random.value;
+			newCube.GetComponent<CubeScript> ().rotateSpeed = 2*perc; // perc; // Random.value;
 			newCube.GetComponentInChildren<TextMesh>().text = product.ProductName;
 		}
 
