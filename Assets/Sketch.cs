@@ -38,9 +38,9 @@ public class Sketch : MonoBehaviour {
 
 			GameObject newCube = (GameObject)Instantiate (myPrefab, new Vector3 (x, y, z), Quaternion.identity);
 
-			newCube.GetComponent<CubeScript>().SetSize (2 * (1.0f - perc)); //.5f is the maximum value
+			newCube.GetComponent<CubeScript>().SetSize ((1.0f - perc)*2); //.5f is the maximum value
 			newCube.GetComponent<CubeScript> ().rotateSpeed = perc; // perc; // Random.value;
-			newCube.GetComponent<TextMesh>().text = product.ProductName;
+			newCube.GetComponentInChildren<TextMesh>().text = product.ProductName;
 		}
 
 
